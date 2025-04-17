@@ -14,13 +14,8 @@
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: true;"
   >
     <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
-    <a-nft
-      type="nft"
-      url="/qr_test/qrcode"
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance=".01"
-      smoothThreshold="5"
+    <a-marker type='barcode' value='7'>
+  
     >
       <a-entity
         gltf-model="/qr_test/volvo_240.glb"
@@ -28,7 +23,7 @@
         position="0 0 0"
       >
       </a-entity>
-    </a-nft>
+    </a-marker>oothThreshold="5">
     <a-entity camera></a-entity>
   </a-scene>
 </body>
