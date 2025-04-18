@@ -1,23 +1,40 @@
-<html>
+<!DOCTYPE html>
+<html lang="">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <meta charset="utf-8">
+    <title>
+
+
+    </title>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: targets.mind; filterMinCF:0.001; filterBeta: 10;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-
-      
-    <a-assets>  
-      <a-asset-item id="avatarModel" src="model.glb"></a-asset-item>
-    </a-assets>
+    <header></header>
+    <main>
+      <div>
 
 
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-      <a-entity mindar-image-target="targetIndex: 0">
-        <a-plane color="blue" opaciy="0.5" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0.1" scale="3 3 3" src="#avatarModel">
-      </a-entity>
-    </a-scene>
+
+
+<model-viewer src="model.glb" ar ar-modes="webxr" camera-controls tone-mapping="neutral" shadow-intensity="1">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
+</div>
+
+<!-- Import the component -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+
+
+        </main>
+    <footer></footer>
   </body>
 </html>
