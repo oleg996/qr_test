@@ -10,8 +10,19 @@
   <a-scene 
   trackingMethod: best;
   embedded 
-  arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;  ' >
-    <a-marker type="pattern" preset="custom" url="/qr_test/pattern-qrcode.patt">
+  arjs='trackingMethod: best; sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;  ' >
+    
+
+          <a-nft
+          type="nft"
+          url="/qr_test/card"
+          smooth="true"
+          smoothCount="10"
+          smoothTolerance=".01"
+          smoothThreshold="5"
+        >
+
+
   
       <a-entity
         gltf-model="/qr_test/model.glb"
@@ -19,7 +30,7 @@
         position="0 0 0"
       >
       </a-entity>
-    </a-marker>
+    </a-nft>
     <a-entity camera></a-entity>
   </a-scene>
 </body>
