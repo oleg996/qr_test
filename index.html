@@ -14,9 +14,9 @@
   arjs='trackingMethod: best; sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;  ' >
     
 
-          <a-nft
-          type="nft"
-          url="/qr_test/card"
+          <a-marker
+          type="barcode"
+          value="7"
           smooth="true"
           smoothCount="10"
           smoothTolerance=".01"
@@ -27,11 +27,11 @@
   
       <a-entity
         gltf-model="/qr_test/model.glb"
-        scale="1000 1000 1000"
+        scale="10 10 10"
         position="0 0 0"
       >
       </a-entity>
-    </a-nft>
+    </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
 </body>
