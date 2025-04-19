@@ -35,11 +35,13 @@
   <body>
 
 
-<model-viewer src="model.glb" ar ar-modes="webxr" camera-controls tone-mapping="neutral" shadow-intensity="1">
+<model-viewer src="model.glb" ios-src="model.usdz"  ar camera-controls tone-mapping="neutral" shadow-intensity="1">
 
   <button slot="ar-button" style="background-color: white; border-radius: 10; border: none; position: absolute; bottom: 40px; right: 40px;width: 40%;aspect-ratio: 3 / 1;font-size:5vw;  ">
       👋 Activate AR
   </button>
+
+  <div id="error" class="hide">AR is not supported on this device</div>
 
 
 </model-viewer>
