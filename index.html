@@ -30,11 +30,23 @@
   }
     .slider {
     width: 100%;
-    height: 25%;
+    height: 10%;
     text-align: center;
     position: fixed;
     bottom: 16px;
   }
+      .slide {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+}
 
 
 
@@ -54,10 +66,8 @@
   </button>
 
    <div class="slider">
-      <button class="slide" onclick="switchSrc(this, 'add')" style=" border-radius: 10; border: none; position: absolute; right: 10px;width: 40%;aspect-ratio: 3 / 1;font-size:5vw; background-color: transparent;" >
-        >
-      </button><button class="slide" onclick="switchSrc(this, 'sub')" style="border-radius: 10; border: none; position: absolute; left: 10px;width: 40%;aspect-ratio: 3 / 1;font-size:5vw; background-color: transparent;" >
-        <
+      <button class="slide" onclick="switchSrc(this, 'add')" style="position: absolute; right: 10px;width: 25%;height: 100%;background-image:url('R.jpg'); background-color: none" >
+      </button><button class="slide" onclick="switchSrc(this, 'sub')" style="position: absolute; left: 10px;width: 25%;height: 100%;background-image:url('L.jpg'); background-color: none" >
     </button>
   </div>
 
