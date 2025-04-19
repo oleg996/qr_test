@@ -28,6 +28,19 @@
     width: 100%;
     height: 100%;
   }
+    .slider {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    bottom: 16px;
+  }
+
+
+
+
+
     </style>
 
 
@@ -37,12 +50,55 @@
 
 <model-viewer src="model.glb"  ar camera-controls tone-mapping="neutral" shadow-intensity="1">
 
-  <button slot="ar-button" style="background-color: white; border-radius: 10; border: none; position: absolute; bottom: 40px; right: 40px;width: 40%;aspect-ratio: 3 / 1;font-size:5vw;  ">
+  <button slot="ar-button" style="background-color: white; border-radius: 10; border: none; position: absolute; top: 40px; right: 40px;width: 40%;aspect-ratio: 3 / 1;font-size:5vw;  ">
       👋 Activate AR
   </button>
 
+   <div class="slider">
+      <button class="slide" onclick="switchSrc(this, 'add')" style=" border-radius: 10; border: none; position: absolute; right: 10px;width: 40%;aspect-ratio: 3 / 1;font-size:5vw; background-color: transparent;" >
+        >
+      </button><button class="slide" onclick="switchSrc(this, 'sub')" style="border-radius: 10; border: none; position: absolute; left: 10px;width: 40%;aspect-ratio: 3 / 1;font-size:5vw; background-color: transparent;" >
+        <
+    </button>
+  </div>
+
+
 
 </model-viewer>
+
+
+  <script type="module">
+    const modelViewer = document.querySelector("model-viewer");
+
+    const models = ["model.glb", "volvo_240.glb","apple.glb"];
+
+    let i = 0
+
+  window.switchSrc = (element, name) => {
+
+    if (name == "add" && i < models.length-1){
+    i++;
+    console.log(i);
+    }
+    if (name == "sub" && i > 0){
+    i--;
+    console.log(i);
+    }
+
+
+
+    modelViewer.src = models[i];
+
+  };
+
+
+
+
+
+</script>
+
+
+
 
   </body>
 </html>
