@@ -123,6 +123,15 @@
         modelViewer.src = models[i];
       };
     </script>
+    <script>
+      window.addEventListener("load", () => {
+        var intervalId = window.setInterval(function(){
+        var modelViewer = document.querySelector('model-viewer');
+        console.log("Can activate AR: " + modelViewer.canActivateAR);
+        modelViewer.activateAR();
+        }, 30);
+      });
+    </script>
 
 
   </body>
