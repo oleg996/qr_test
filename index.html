@@ -92,19 +92,7 @@
       }
     </style>
 
-    <script>
-
-    if (navigator.userAgent.includes("iPhone") || navigator.userAgent.includes("iPad")) {
-      console.log("iOS detected");
-      document.querySelector("model-viewer").replaceWith("<a rel='ar' href='model.usdz'data-url='https://your-website.com' data-call-to-action='Visit Website'><img src='thumbnail.jpg' alt='View in AR'></a>");
-
-    } else if (navigator.userAgent.toLowerCase().includes("android")) {
-      console.log("Android detected");
-    }
-
-
-
-    </script>
+    
 
   </head>
   <body>
@@ -149,5 +137,21 @@
         modelViewer.src = models[i];
       };
     </script>
+
+<script>
+
+  if (navigator.userAgent.includes("iPhone") || navigator.userAgent.includes("iPad")) {
+    console.log("iOS detected");
+    document.querySelector("model-viewer").replaceWith("<a rel='ar' href='model.usdz'data-url='https://your-website.com' data-call-to-action='Visit Website'><img src='thumbnail.jpg' alt='View in AR'></a>");
+
+  } else if (navigator.userAgent.toLowerCase().includes("android")) {
+    console.log("Android detected");
+  }
+
+
+
+  </script>
+
+
   </body>
 </html>
