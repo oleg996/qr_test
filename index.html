@@ -97,10 +97,11 @@
   </head>
   <body>
     <model-viewer src="model.glb" ios-src="model.usdz" ar camera-controls tone-mapping="neutral" shadow-intensity="1" autoplay animation-name="rotate">
+      <div id = "ar_button">
       <button slot="ar-button" id = "click">
         👋 Activate AR
       </button>
-
+    </div>
      <!-- <div class="slider">
         <button class="slide" onclick="switchSrc(this, 'sub')" style="background-image:url('L.png'); background-color: transparent;">
         </button>
@@ -142,7 +143,7 @@
 
   if (navigator.userAgent.includes("iPhone") || navigator.userAgent.includes("iPad")) {
     console.log("iOS detected");
-    document.querySelector("model-viewer").innerHTML ="<a rel='ar' href='model.usdz'data-url='https://your-website.com' data-call-to-action='Visit Website'><img src='thumbnail.jpg' alt='View in AR'></a>";
+    document.getElementById("ar_button").innerHTML ="<a rel='ar' slot='ar-button' href='model.usdz'data-url='https://your-website.com' data-call-to-action='Visit Website'><img src='thumbnail.jpg' alt='View in AR'></a>";
 
   } else if (navigator.userAgent.toLowerCase().includes("android")) {
     console.log("Android detected");
