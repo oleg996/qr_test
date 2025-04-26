@@ -91,6 +91,19 @@
         aspect-ratio: auto; /* Remove fixed aspect ratio */
       }
     </style>
+
+    <script>
+
+    if (navigator.userAgent.includes("iPhone") || navigator.userAgent.includes("iPad")) {
+      console.log("iOS detected");
+    } else if (navigator.userAgent.toLowerCase().includes("android")) {
+      console.log("Android detected");
+    }
+
+
+
+    </script>
+
   </head>
   <body>
     <model-viewer src="model.glb" ios-src="model.usdz" ar camera-controls tone-mapping="neutral" shadow-intensity="1" autoplay animation-name="rotate">
