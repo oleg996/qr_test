@@ -143,7 +143,7 @@
 
   if (navigator.userAgent.includes("iPhone") || navigator.userAgent.includes("iPad")) {
     console.log("iOS detected");
-    document.getElementById("ar_button").innerHTML ="<a rel='ar' slot='ar-button' href='model.usdz'data-url='https://your-website.com' data-call-to-action='Visit Website'><img src='thumbnail.jpg' alt='View in AR'></a>";
+    document.getElementById("ar_button").innerHTML ="<a rel='ar' slot='ar-button' href='model.usdz'data-url='https://your-website.com' data-call-to-action='Visit Website'> <button slot='ar-button'>👋 Activate AR </button>  </a>";
 
   } else if (navigator.userAgent.toLowerCase().includes("android")) {
     console.log("Android detected");
