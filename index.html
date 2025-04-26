@@ -145,8 +145,9 @@
     console.log("iOS detected");
     document.getElementById("ar_button").innerHTML ="<a rel='ar' slot='ar-button' href='model.usdz'data-url='https://your-website.com' data-call-to-action='Visit Website'> <button slot='ar-button'>👋 Activate AR </button>  </a>";
 
-  } else if (navigator.userAgent.toLowerCase().includes("android")) {
-    console.log("Android detected");
+  } else {
+    console.log("Android or ets detected");
+    document.getElementById("ar_button").outerHTML = "<button slot='ar-button' id = 'click'>👋 Activate AR</button>"
   }
 
 
